@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="HelloActorPkg" Version="1.0.0" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <ServiceTypes>
+    <StatefulServiceType ServiceTypeName="HelloActorServiceType" HasPersistedState="true">
+      <Extensions>
+        <Extension Name="__GeneratedServiceType__" GeneratedId="bb770950-c068-4fa3-8d08-05f363f3e311|Persisted">
+          <GeneratedNames xmlns="http://schemas.microsoft.com/2015/03/fabact-no-schema">
+            <DefaultService Name="HelloActorService" />
+            <ServiceEndpoint Name="HelloActorServiceEndpoint" />
+            <ReplicatorEndpoint Name="HelloActorServiceReplicatorEndpoint" />
+            <ReplicatorConfigSection Name="HelloActorServiceReplicatorConfig" />
+            <ReplicatorSecurityConfigSection Name="HelloActorServiceReplicatorSecurityConfig" />
+            <StoreConfigSection Name="HelloActorServiceLocalStoreConfig" />
+          </GeneratedNames>
+        </Extension>
+      </Extensions>
+    </StatefulServiceType>
+  </ServiceTypes>
+  <CodePackage Name="Code" Version="1.0.0">
+    <EntryPoint>
+      <ExeHost>
+        <Program>HelloActor.exe</Program>
+      </ExeHost>
+    </EntryPoint>
+  </CodePackage>
+  <ConfigPackage Name="Config" Version="1.0.0" />
+  <Resources>
+    <Endpoints>
+      <Endpoint Name="HelloActorServiceEndpoint" />
+      <Endpoint Name="HelloActorServiceReplicatorEndpoint" />
+    </Endpoints>
+  </Resources>
+  <!-- コンテンツはビルド時に生成されます -->
+</ServiceManifest>
